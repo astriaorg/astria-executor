@@ -1,5 +1,7 @@
 syntax = 'proto3';
 
+package execution;
+
 message DoBlockRequest {
   bytes header = 1;
   repeated bytes transactions = 2;
