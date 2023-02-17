@@ -1,5 +1,18 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+use bytes::Bytes;
+
+pub struct DoBlockRequest {
+    /// The header of the block
+    header: Bytes,
+    /// The transactions that make up the block
+    transactions: Vec<Bytes>,
+}
+pub struct DoBlockResponse {
+    /// The new state root
+    state_root: Bytes,
+}
+
+pub fn do_block(do_block_request: DoBlockRequest) -> DoBlockResponse {
+    todo!()
 }
 
 #[cfg(test)]
@@ -8,7 +21,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        // TODO
+        assert_eq!(true, true);
     }
 }
