@@ -1,6 +1,7 @@
-use execution::execution_service_server::{ExecutionService, ExecutionServiceServer};
-use execution::{DoBlockRequest, DoBlockResponse};
 use tonic::{Request, Response, Status, transport::Server};
+
+use execution::{DoBlockRequest, DoBlockResponse};
+use execution::execution_service_server::{ExecutionService, ExecutionServiceServer};
 
 pub mod execution {
     tonic::include_proto!("execution");
@@ -14,7 +15,9 @@ impl ExecutionService for ExecutionServer {
     async fn do_block(&self, _request: Request<DoBlockRequest>) -> Result<Response<DoBlockResponse>, Status> {
         // TODO - gen_execution_payload
         println!("ExecutionServer.do_block {:#?}", _request);
-        todo!()
+        Ok(Response::new(DoBlockResponse {
+            state_root: vec![1, 2, 3]
+        }))
     }
 }
 
