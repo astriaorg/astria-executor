@@ -12,7 +12,6 @@ First, install Buf CLI and authenticate yourself:
 
 * `$ brew install bufbuild/buf/buf` - using homebrew
     * [other ways to install](https://docs.buf.build/installation)
-* `$ buf registry login` - [must first create an API token](https://docs.buf.build/tutorials/getting-started-with-bsr#create-an-api-token)
 
 ### Running for development
 
