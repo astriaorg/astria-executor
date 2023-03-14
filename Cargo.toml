@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 bytes = "1.4.0"
+color-eyre = "0.6.2"
 prost = "0.11.6"
 reth-executor = { git = "https://github.com/paradigmxyz/reth" }
 tokio = { version = "1.25.0", features = ["rt-multi-thread", "macros"] }

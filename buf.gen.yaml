@@ -4,13 +4,9 @@ managed:
   go_package_prefix:
     default: github.com/bufbuild/buf-tour/gen
 plugins:
+  # types
   - plugin: buf.build/community/neoeinstein-prost
     out: src
+  # client and server
   - plugin: buf.build/community/neoeinstein-tonic
     out: src
-  - plugin: buf.build/protocolbuffers/go
-    out: gen-go
-    opt: paths=source_relative
-  - plugin: buf.build/bufbuild/connect-go
-    out: gen-go
-    opt: paths=source_relative
