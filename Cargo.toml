@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+astria-execution-apis-rpc = { git = "https://github.com/astriaorg/astria-rpc", rev = "47e1c69d519586242340b9bb93ed56269cedad3c" }
 bytes = "1.4.0"
 color-eyre = "0.6.2"
 prost = "0.11.6"

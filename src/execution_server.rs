@@ -1,11 +1,6 @@
+use astria_execution_apis_rpc::execution::{DoBlockRequest, DoBlockResponse};
+use astria_execution_apis_rpc::execution::execution_service_server::ExecutionService;
 use tonic::{Request, Response, Status};
-
-use execution::execution_service_server::ExecutionService;
-use execution::{DoBlockRequest, DoBlockResponse};
-
-pub mod execution {
-    include!("execution.v1.rs");
-}
 
 #[derive(Default)]
 pub struct ExecutionRpcServer {}

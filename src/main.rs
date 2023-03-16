@@ -1,8 +1,8 @@
+use astria_execution_apis_rpc::execution::execution_service_server::ExecutionServiceServer;
 use color_eyre::eyre::Result;
 
-use astria_executor::execution_server::execution::execution_service_server::ExecutionServiceServer;
-use astria_executor::execution_server::ExecutionRpcServer;
 use tonic::transport::Server;
+use astria_executor::execution_server::ExecutionRpcServer;
 
 #[tokio::main]
 async fn main() -> Result<()> {

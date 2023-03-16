@@ -70,9 +70,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8da52d66c7071e2e3fa2a1e5c6d088fec47b593032b254f5e980de8ea54454d6"
 
 [[package]]
+name = "astria-execution-apis-rpc"
+version = "0.1.0"
+source = "git+https://github.com/astriaorg/astria-rpc?rev=47e1c69d519586242340b9bb93ed56269cedad3c#47e1c69d519586242340b9bb93ed56269cedad3c"
+dependencies = [
+ "prost",
+ "tonic",
+]
+
+[[package]]
 name = "astria-executor"
 version = "0.1.0"
 dependencies = [
+ "astria-execution-apis-rpc",
  "bytes",
  "color-eyre",
  "prost",
